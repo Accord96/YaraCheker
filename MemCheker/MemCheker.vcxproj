@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f0ef4431-1aef-4fa0-967b-ea405682cfea}</ProjectGuid>
+    <RootNamespace>MemCheker</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ReferencePath>$(VC_ReferencesPath_x64)</ReferencePath>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libyara\include\yara\ahocorasick.c" />
+    <ClCompile Include="libyara\include\yara\arena.c" />
+    <ClCompile Include="libyara\include\yara\atoms.c" />
+    <ClCompile Include="libyara\include\yara\base64.c" />
+    <ClCompile Include="libyara\include\yara\bitmask.c" />
+    <ClCompile Include="libyara\include\yara\compiler.c" />
+    <ClCompile Include="libyara\include\yara\endian.c" />
+    <ClCompile Include="libyara\include\yara\exec.c" />
+    <ClCompile Include="libyara\include\yara\exefiles.c" />
+    <ClCompile Include="libyara\include\yara\filemap.c" />
+    <ClCompile Include="libyara\include\yara\grammar.c" />
+    <ClCompile Include="libyara\include\yara\hash.c" />
+    <ClCompile Include="libyara\include\yara\hex_grammar.c" />
+    <ClCompile Include="libyara\include\yara\hex_lexer.c" />
+    <ClCompile Include="libyara\include\yara\lexer.c" />
+    <ClCompile Include="libyara\include\yara\libyara.c" />
+    <ClCompile Include="libyara\include\yara\mem.c" />
+    <ClCompile Include="libyara\include\yara\modules.c" />
+    <ClCompile Include="libyara\include\yara\notebook.c" />
+    <ClCompile Include="libyara\include\yara\object.c" />
+    <ClCompile Include="libyara\include\yara\parser.c" />
+    <ClCompile Include="libyara\include\yara\proc.c" />
+    <ClCompile Include="libyara\include\yara\re.c" />
+    <ClCompile Include="libyara\include\yara\re_grammar.c" />
+    <ClCompile Include="libyara\include\yara\re_lexer.c" />
+    <ClCompile Include="libyara\include\yara\rules.c" />
+    <ClCompile Include="libyara\include\yara\scan.c" />
+    <ClCompile Include="libyara\include\yara\scanner.c" />
+    <ClCompile Include="libyara\include\yara\simple_str.c" />
+    <ClCompile Include="libyara\include\yara\sizedstr.c" />
+    <ClCompile Include="libyara\include\yara\stack.c" />
+    <ClCompile Include="libyara\include\yara\stopwatch.c" />
+    <ClCompile Include="libyara\include\yara\stream.c" />
+    <ClCompile Include="libyara\include\yara\strutils.c" />
+    <ClCompile Include="libyara\include\yara\threading.c" />
+    <ClCompile Include="libyara\include\yara\windows.c" />
+    <ClCompile Include="libyara\modules\dotnet\dotnet.c" />
+    <ClCompile Include="libyara\modules\hash\hash_module.c" />
+    <ClCompile Include="libyara\modules\pe\pe.c" />
+    <ClCompile Include="libyara\modules\pe\pe_utils.c" />
+    <ClCompile Include="libyara\modules\string\string.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="yaracpp\yara_detector.cpp" />
+    <ClCompile Include="yaracpp\yara_match.cpp" />
+    <ClCompile Include="yaracpp\yara_meta.cpp" />
+    <ClCompile Include="yaracpp\yara_rule.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.hpp" />
+    <ClInclude Include="libyara\include\yara.h" />
+    <ClInclude Include="libyara\include\yara\ahocorasick.h" />
+    <ClInclude Include="libyara\include\yara\arena.h" />
+    <ClInclude Include="libyara\include\yara\atoms.h" />
+    <ClInclude Include="libyara\include\yara\base64.h" />
+    <ClInclude Include="libyara\include\yara\bitmask.h" />
+    <ClInclude Include="libyara\include\yara\compiler.h" />
+    <ClInclude Include="libyara\include\yara\crypto.h" />
+    <ClInclude Include="libyara\include\yara\dex.h" />
+    <ClInclude Include="libyara\include\yara\dotnet.h" />
+    <ClInclude Include="libyara\include\yara\elf.h" />
+    <ClInclude Include="libyara\include\yara\elf_utils.h" />
+    <ClInclude Include="libyara\include\yara\endian.h" />
+    <ClInclude Include="libyara\include\yara\error.h" />
+    <ClInclude Include="libyara\include\yara\exception.h" />
+    <ClInclude Include="libyara\include\yara\exec.h" />
+    <ClInclude Include="libyara\include\yara\exefiles.h" />
+    <ClInclude Include="libyara\include\yara\filemap.h" />
+    <ClInclude Include="libyara\include\yara\globals.h" />
+    <ClInclude Include="libyara\include\yara\grammar.h" />
+    <ClInclude Include="libyara\include\yara\hash.h" />
+    <ClInclude Include="libyara\include\yara\hex_grammar.h" />
+    <ClInclude Include="libyara\include\yara\hex_lexer.h" />
+    <ClInclude Include="libyara\include\yara\integers.h" />
+    <ClInclude Include="libyara\include\yara\lexer.h" />
+    <ClInclude Include="libyara\include\yara\libyara.h" />
+    <ClInclude Include="libyara\include\yara\limits.h" />
+    <ClInclude Include="libyara\include\yara\macho.h" />
+    <ClInclude Include="libyara\include\yara\mem.h" />
+    <ClInclude Include="libyara\include\yara\modules.h" />
+    <ClInclude Include="libyara\include\yara\notebook.h" />
+    <ClInclude Include="libyara\include\yara\object.h" />
+    <ClInclude Include="libyara\include\yara\parser.h" />
+    <ClInclude Include="libyara\include\yara\pe.h" />
+    <ClInclude Include="libyara\include\yara\pe_utils.h" />
+    <ClInclude Include="libyara\include\yara\proc.h" />
+    <ClInclude Include="libyara\include\yara\re.h" />
+    <ClInclude Include="libyara\include\yara\re_grammar.h" />
+    <ClInclude Include="libyara\include\yara\re_lexer.h" />
+    <ClInclude Include="libyara\include\yara\rules.h" />
+    <ClInclude Include="libyara\include\yara\scan.h" />
+    <ClInclude Include="libyara\include\yara\scanner.h" />
+    <ClInclude Include="libyara\include\yara\simple_str.h" />
+    <ClInclude Include="libyara\include\yara\sizedstr.h" />
+    <ClInclude Include="libyara\include\yara\stack.h" />
+    <ClInclude Include="libyara\include\yara\stopwatch.h" />
+    <ClInclude Include="libyara\include\yara\stream.h" />
+    <ClInclude Include="libyara\include\yara\strutils.h" />
+    <ClInclude Include="libyara\include\yara\threading.h" />
+    <ClInclude Include="libyara\include\yara\types.h" />
+    <ClInclude Include="libyara\include\yara\unaligned.h" />
+    <ClInclude Include="libyara\include\yara\utils.h" />
+    <ClInclude Include="libyara\modules\dotnet\dotnet.h" />
+    <ClInclude Include="libyara\modules\hash\hash.h" />
+    <ClInclude Include="libyara\modules\hash\hash_module.h" />
+    <ClInclude Include="libyara\modules\pe\pe.h" />
+    <ClInclude Include="libyara\modules\string\string.h" />
+    <ClInclude Include="yaracpp\yara_detector.h" />
+    <ClInclude Include="yaracpp\yara_match.h" />
+    <ClInclude Include="yaracpp\yara_meta.h" />
+    <ClInclude Include="yaracpp\yara_rule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libyara\include\yara\stino.settings" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
