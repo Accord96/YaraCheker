@@ -97,11 +97,11 @@ void ParseYarLink(std::string pathYarLink, std::vector<string>& outLink)
 			break;
 		}
 		*/
-		/*if (newPath.find("REvil_Cert.yar") != string::npos)
+		if (newPath.find("REvil_Cert.yar") != string::npos)
 		{
 			std::cout << "End Skip" << std::endl;
 			continue;
-		}*/
+		}
 
 		outLink.push_back(newPath);
 		std::cout << newPath << std::endl;
@@ -133,21 +133,25 @@ int main()
 		{
 			std::cout << "Error yara: " << path << std::endl;
 		}
-		//break;
+		break;
 
 	}
 
-	if (!yara.analyze("C:\\Users\\admin\\Desktop\\1.txt", 0))
+	if (!yara.analyze("C:\\Users\\admin\\Desktop\\server\\321.com", 1))
 	{
 		MessageBox(0, 0, L"No detect", 0);
 	}
 
 
-	for (auto& detect : yara.getDetectedRules())
+	for (const auto& rule : yara.getDetectedRules())
 	{
-		MessageBoxA(0, 0, detect.getName().c_str(), 0);
-		
+		MessageBoxA(0, 0, rule.getName().c_str(), 0);
 	}
+	//for (auto& detect : yara.getDetectedRules())
+	//{
+	//	MessageBoxA(0, 0, detect.getName().c_str(), 0);
+	//	
+	//}
 
 	while (true)
 	{
